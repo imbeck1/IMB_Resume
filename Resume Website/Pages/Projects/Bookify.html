@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter Template</title>
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <!--Header Nav Bar-->
+    <nav>
+        <div class="container">
+            <h1 class="log">
+                Isaac Beck
+            </h1>
+            <a href="../../index.html" class="create">
+                <label class="btn btn-primary" for="button">Home</label>
+            </a>
+        </div>
+    </nav>
+    <!--Main-->
+    <main>
+        <div class="container">
+            
+
+            <!--Middle-->
+            <div class="middle">
+                <!--Middle Header-->
+                <div class="middle-header">
+                    
+                </div>
+                <!--Mid Breakup-->
+                <div class="breakup">
+
+                </div>
+                <!--Middle Main-->
+                <div class="info-card">
+                    <h1>Bookify</h1>
+                    <div class="info-text">
+                        <p>
+                            This page showcases features for my Capstone Project for Appalachian State. The title of this project was "Bookify". It was a JavaScript built, 
+                            AI-powered site that used OpenAI and Spotify web APIs to generate playlists for a user based on their inputted book title. The site was built using HTML 
+                            CSS, and JavaScript using Node.js to write the functions and to make calls to the APIs. I do not still have the keys for either the Spotify or 
+                            OpenAI APIs, and have lost my previous reports (due to hard drive corruption) that included screenshots of the running project. Therefore, 
+                            a link at the bottom of this page will direct to the Github source code for this project. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-card-dark">
+                    <h2>Front End</h2>
+                    <div class="info-text">
+                        <p>
+                            The front end for Bookify was very simple. I used .ejs files for my markup so that DOM features would be more easily implimented with Node.js. My front end 
+                            consisted of a Login page, a Home page, and a Success page. The Login page was the first one visible when visiting the site. The page made a call to 
+                            Spotify, allowing a user to login to their Spotify account. Once logged in, the user was then directed to the Home page where they were prompted to 
+                            enter a book title. Once the user entered a book title, if the title was vaild, the program would create a Spotify playlist for them and direct them to 
+                            the Success page which contained a link to the user's newly created playlist.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="small-image" src="../../images/bookify-home-code.JPG">
+
+                <div class="info-card-dark">
+                    <h2>Algorithm</h2>
+                    <div class="info-text">
+                        <p>
+                            For the analysis of any given book, I used OpenAI's ChatGPT to analyze the book. ChatGPT would first confirm whether the inputted text was or was 
+                            not a book before continuing with an analysis. Once the book was validated, the AI model would give an estimated average reading time for the given 
+                            book and then break it into sections. Each section was then analyzed by ChatGPT and assigned themes and tones. Those were then translated into 
+                            a list of Spotify-compatible genres. Once those genres were generated, the algorithm would make calls to Spotify using the genres to find a song that 
+                            fit. These songs would generate until the playlist had a duration equal to the determined average reading time for the book. The filled playlist would 
+                            be immediately available in the user's Spotify library.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="small-image" src="../../images/bookify-server-code.JPG">
+
+                <div class="info-card-dark">
+                    <h2>Fine Tuning</h2>
+                    <div class="info-text">
+                        <p>
+                            The exactness of variables were very important to my algorithm. Every generated variable had to be precise to work with the rest of the code. 
+                            At first, I had a lot of trouble keeping my ChatGPT generation consistent. However, before the end of the project I learned about Fine-Tuned models. 
+                            This feature let me create a personalized version of any ChatGPT model and teach it what input to expect and what output to generate. It took a lot of 
+                            trial and error to fine-tune my model to work the best with my algorithm. After many attempts, I finally got a model that perfectly fit my needs.
+                        </p>
+                    </div>
+                </div>
+
+                <img class="small-image" src="../../images/tuning.JPG">
+
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <h5>Email: beckisaac23@gmail.com</h5>
+            <a href="https://github.com/imbeck1/Bookify.git" class="resume">
+                <label class="btn btn-primary" for="button">Project Github</label>
+            </a>
+        </div>
+        
+    </footer>
+<script src="./index.js"></script>
+</body>
+</html>

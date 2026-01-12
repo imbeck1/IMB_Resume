@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+:root{
+    --primary-color-hue: 215;
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+    --color-white: hsl(252, 30%, var(--white-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+    --color-secondary: hsl(var(--primary-color-hue), 100%, 90%);
+    --color-success: hsl(120, 95%, 65%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+    --color-black: hsl(252, 30%, 10%);
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*, 
+*::before, 
+*::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+body{
+    font-family: "Moderustic", sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+/* General Styles */
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+
+
+.text-muted{
+    color: var(--color-gray);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Header */
+
+nav{
+    width: 100%;
+    background: rgb(14, 19, 46);
+    color: white;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav h1 {
+    font-size: 3rem;
+}
+
+/* ================ MAIN ================ */
+
+main{
+    position: relative;
+    top: 5.4rem;
+}
+
+main .container{
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.middle {
+    padding-bottom: 5rem;
+}
+
+
+/* ================ NAV ================ */
+
+.middle .nav-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--color-primary);
+    cursor: pointer;
+}
+
+.cards {
+    flex: 1;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.cards:hover {
+    flex-grow: 2;
+}
+
+.cards h3 {
+    text-align: center;
+}
+
+.projects {
+    background: url(./images/projects-image.jpg) no-repeat center center;
+    background-size: cover;
+    width: 30%;
+}
+
+.languages {
+    background: url(./images/programming-languages.jpg) no-repeat center center;
+    background-size: cover;
+    width: 30%;
+}
+
+.education {
+    background: url(./images/Appalachian-State-University.jpg) no-repeat center center;
+    background-size: cover;
+    width: 30%;
+}
+
+.cards .text-card {
+    
+    margin-top: 2rem;
+    width: 12rem;
+    border-radius: 0 1rem 1rem 0;
+    background: var(--color-secondary);
+    color: black;
+    font-size: 1.3rem;
+    box-shadow: 0 0 1rem var(--color-dark);
+}
+
+/* ================ PROJECTS ================ */
+
+.middle .project-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--color-primary);
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.project-text {
+    margin-top: 2rem;
+    width: 12rem;
+    border-radius: 0 1rem 1rem 0;
+    background: var(--color-secondary);
+    color: black;
+    font-size: 1.3rem;
+    box-shadow: 0 0 1rem var(--color-dark);
+    text-align: center;
+    height: fit-content;
+}
+
+.realty {
+    background: url(./images/IMB_Realty.JPG) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+.bookify {
+    background: url(./images/bookify.JPG) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+.social {
+    background: url(./images/IMB_Social.JPG) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+/* ================ Education ================ */
+
+.middle .education-nav {
+    display: grid;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.education {
+    background: url(./images/Appalachian-State-University.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+}
+
+/* ================ Images ================ */
+
+img {
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
+    margin: 0 auto;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--color-primary);
+    margin-bottom: 1rem;
+    margin-top: 1rem;  
+}
+
+.small-image {
+    max-width: 100%; 
+    height: auto;    
+    display: block;  
+    margin: 0 auto;
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 1rem var(--color-primary);
+    margin-bottom: 1rem;
+    margin-top: 1rem;  
+}
+
+
+/* ================ INFO ================ */
+
+.info-card {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    background: white;
+}
+
+.info-card h1 {
+    padding-top: 1rem;
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+
+.info-card h2 {
+    padding-top: 1rem;
+    margin-left: 1rem;
+}
+
+.info-text {
+    margin-top: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-bottom: 1rem;
+    font-size: 1.15rem;
+}
+
+.info-card-dark {
+    position: relative;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    background: rgb(14, 19, 46);
+    color: white;
+}
+
+.info-card-dark h2 {
+    padding-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* ================ FOOTER ================ */
+
+footer{
+    width: 100%;
+    background: rgb(14, 19, 46);
+    color: white;
+    padding: 0.7rem 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .resume{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* ================ Size Adjusted ================ */
+
+@media screen and (min-width: 1201px) {
+    .small-image {
+        max-width: 50%;
+    }
+}
